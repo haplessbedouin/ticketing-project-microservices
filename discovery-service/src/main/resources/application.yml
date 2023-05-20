@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+#   register-with-eureka: false = This is the registry service itself so don't register this service into eureka
