@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/haplessbedouin/ticketing-project-microservices-config
+          default-label: main
+          username: haplessbedouin
+          password: '{cipher}79062d884ebecec5e0bcb4d5960473de926e7deb39cd9d2ed1df5ede1b720fbde7f1df55914c18f08109f543f6a03e6b9705fdcc333210b54dc2c5d82cf8c85f'
+      fail-fast: true
+
+encrypt:
+  key: tugrul
+
+server:
+  port: 8888
